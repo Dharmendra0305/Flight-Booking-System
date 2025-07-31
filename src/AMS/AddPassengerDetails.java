@@ -178,7 +178,8 @@ public class AddPassengerDetails extends JFrame implements ActionListener
                 JOptionPane.showMessageDialog(null, "Details Successfully Inserted");
                 f.setVisible(false);
 //                new HomePage();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 ex.printStackTrace();
             }

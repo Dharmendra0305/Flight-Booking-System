@@ -14,7 +14,8 @@ public class ConnectionClass
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ams", "root", "Dev@03#06");
             stm = con.createStatement();
-        } catch (Exception e) 
+        }
+        catch (Exception e)
         {
             e.printStackTrace();
         }

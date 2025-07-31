@@ -93,13 +93,15 @@ public class Login extends JFrame implements ActionListener
                 {
 //                    new HomePage().setVisible(true);
                     f.setVisible(false);
-                } else
+                }
+                else
                 {
                     JOptionPane.showMessageDialog(null, "You have entered Wrong Username and Password!!");
                     f.setVisible(false);
                     f.setVisible(true);
                 }
-            } catch (Exception ex) {
+            }
+            catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
