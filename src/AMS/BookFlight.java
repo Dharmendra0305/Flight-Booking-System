@@ -291,12 +291,105 @@ public class BookFlight extends JFrame implements ActionListener
                 }
             }
         });
+
+        ch4.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                ch5.removeAll();
+                try
+                {
+                    ConnectionClass obj = new ConnectionClass();
+                    String source = ch1.getSelectedItem();
+                    String destination = ch6.getSelectedItem();
+                    String className = ch3.getSelectedItem();
+                    String price = ch4.getSelectedItem();
+                    String q1 = "select distinct f_code from flight where source='"+source+"' and destination='"+destination+"' and class_name='"+className+"' and price='"+price+"'";
+                    ResultSet rest1 = obj.stm.executeQuery(q1);
+                    while (rest1.next())
+                    {
+                        ch5.add(rest1.getString("f_code"));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        ch5.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                try
+                {
+                    ConnectionClass obj = new ConnectionClass();
+                    String source = ch1.getSelectedItem();
+                    String destination = ch6.getSelectedItem();
+                    String className = ch3.getSelectedItem();
+                    String price = ch4.getSelectedItem();
+                    String fcode = ch5.getSelectedItem();
+                    String q1 = "select distinct f_name from flight where source='"+source+"' and destination='"+destination+"' and class_name='"+className+"' and price='"+price+"' and f_code='"+fcode+"'";
+                    ResultSet rest1 = obj.stm.executeQuery(q1);
+                    while (rest1.next())
+                    {
+                        tf2.setText(rest1.getString("f_name"));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        if (e.getSource() == btn1)
+        {
+            String tid = tf1.getText();
+            String source = ch1.getSelectedItem();
+            String destination = ch2.getSelectedItem();
+            String classname = ch3.getSelectedItem();
+            String price = ch4.getSelectedItem();
+            String fcode = ch5.getSelectedItem();
+            String fname = tf2.getText();
+            String jdate = tf3.getText();
+            String jtime = tf4.getText();
+            String username = ch6.getSelectedItem();
+            String name = tf5.getText();
+            String status = "Success";
 
+            try
+            {
+                ConnectionClass obj = new ConnectionClass();
+                String q1 = "insert into bookedFlight values('"+tid+"', '"+source+"', '"+destination+"', '"+classname+"', '"+price+"', '"+fcode+"', '"+fname+"', '"+jdate+"', '"+jtime+"', '"+username+"', '"+name+"', '"+status+"')";
+                int a = obj.stm.executeUpdate(q1);
+                if (a == 1)
+                {
+                    JOptionPane.showMessageDialog(null, "your flight successfully booked");
+                    this.setVisible(false);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Please!, Fill all details carefully");
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.printStackTrace();
+            }
+        }
+        if (e.getSource() == btn2)
+        {
+            JOptionPane.showMessageDialog(null, "Are you sure!!!!");
+            this.setVisible(false);
+        }
     }
 
     public static void main(String[] args)

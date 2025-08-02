@@ -29,13 +29,13 @@ public class ViewPassenger extends JFrame
                 y[i][j++] = rest.getString("username");
                 y[i][j++] = rest.getString("name");
                 y[i][j++] = rest.getString("age");
-                y[i][j++] = rest.getString("dob");
                 y[i][j++] = rest.getString("address");
                 y[i][j++] = rest.getString("phone");
-                y[i][j++] = rest.getString("Email");
+                y[i][j++] = rest.getString("email");
                 y[i][j++] = rest.getString("nationality");
                 y[i][j++] = rest.getString("gender");
                 y[i][j++] = rest.getString("passport");
+                y[i][j++] = rest.getString("dob");
                 i++;
                 j = 0;
             }
