@@ -4,15 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.ResultSet;
 
-public class ViewBookedFlight extends JFrame
+public class FlightJourneyDetails extends JFrame
 {
     JTable t;
-    String[] x = {"Ticket ID", "Source", "Destination", "Class", "Price", "Flight Code", "Flight Name", "Journey Date", "Journey Time", "Username", "Name", "Status"};
-    String[][] y = new String[20][12];
+    String[] x = {"Ticket ID", "Source", "Destination", "Class", "Price", "Flight Code", "Flight Name", "Journey Date", "Journey Time", "Username", "Name"};
+    String[][] y = new String[20][11];
     int i = 0, j = 0;
     Font f;
 
-    ViewBookedFlight()
+    FlightJourneyDetails(String src, String dst)
     {
         super("Flight Journey Details");
         setSize(1300, 400);
@@ -22,7 +22,7 @@ public class ViewBookedFlight extends JFrame
         try
         {
             ConnectionClass obj = new ConnectionClass();
-            String q = "Select * from bookedflight";
+            String q = "select * from bookedflight where source='"+src+"' and destination='"+dst+"'";
             ResultSet rest = obj.stm.executeQuery(q);
             while (rest.next())
             {
@@ -37,7 +37,6 @@ public class ViewBookedFlight extends JFrame
                 y[i][j++] = rest.getString("journey_time");
                 y[i][j++] = rest.getString("username");
                 y[i][j++] = rest.getString("name");
-                y[i][j++] = rest.getString("status");
                 i++;
                 j = 0;
             }
@@ -50,12 +49,8 @@ public class ViewBookedFlight extends JFrame
         t.setFont(f);
         t.setBackground(Color.BLACK);
         t.setForeground(Color.WHITE);
+
         JScrollPane js = new JScrollPane(t);
         add(js);
-    }
-
-    public static void main(String[] args)
-    {
-        new ViewBookedFlight().setVisible(true);
     }
 }

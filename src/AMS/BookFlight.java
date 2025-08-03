@@ -354,14 +354,14 @@ public class BookFlight extends JFrame implements ActionListener
         {
             String tid = tf1.getText();
             String source = ch1.getSelectedItem();
-            String destination = ch2.getSelectedItem();
+            String destination = ch6.getSelectedItem();
             String classname = ch3.getSelectedItem();
             String price = ch4.getSelectedItem();
             String fcode = ch5.getSelectedItem();
             String fname = tf2.getText();
             String jdate = tf3.getText();
             String jtime = tf4.getText();
-            String username = ch6.getSelectedItem();
+            String username = ch2.getSelectedItem();
             String name = tf5.getText();
             String status = "Success";
 
