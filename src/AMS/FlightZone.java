@@ -2,14 +2,12 @@ package AMS;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.ResultSet;
+import net.proteanit.sql.DbUtils;
 
 public class FlightZone extends JFrame
 {
     private JTable table;
-    private JTextField t;
     Choice ch1;
 
     FlightZone()
@@ -36,19 +34,19 @@ public class FlightZone extends JFrame
 
         JButton btn = new JButton("Show Details");
         btn.setFont(new Font("Arial", Font.BOLD, 20));
-        btn.addActionListener(new ActionListener()
+        btn.addActionListener(_ ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            try
             {
-                try
-                {
-
-                }
-                catch (Exception ex)
-                {
-                    ex.printStackTrace();
-                }
+                String code = ch1.getSelectedItem();
+                ConnectionClass obj = new ConnectionClass();
+                String q = "select * from flight where f_code='"+code+"'";
+                ResultSet rest = obj.stm.executeQuery(q);
+                table.setModel(DbUtils.resultSetToTableModel(rest));
+            }
+            catch (Exception ex)
+            {
+                ex.printStackTrace();
             }
         });
         btn.setBounds(560, 100, 220, 30);
@@ -57,7 +55,7 @@ public class FlightZone extends JFrame
         table = new JTable();
         table.setBackground(Color.WHITE);
         table.setBounds(23, 250, 800, 300);
-        table.setFont(new Font("Arial", Font.BOLD, 18));
+        table.setFont(new Font("Arial", Font.BOLD, 14));
         add(table);
 
         ch1 = new Choice();
@@ -80,9 +78,9 @@ public class FlightZone extends JFrame
         add(ch1);
 
         JLabel flightC = new JLabel("Flight Code");
-        flightCode.setFont(new Font("Arial", Font.BOLD, 14));
-        flightCode.setBounds(33, 220, 126, 16);
-        flightCode.setForeground(new Color(15, 11, 1));
+        flightC.setFont(new Font("Arial", Font.BOLD, 14));
+        flightC.setBounds(33, 220, 126, 16);
+        flightC.setForeground(new Color(15, 11, 1));
         add(flightC);
 
         JLabel flightName = new JLabel("Flight Name");
@@ -120,6 +118,11 @@ public class FlightZone extends JFrame
         price.setBounds(740, 220, 111, 16);
         price.setForeground(new Color(15, 11, 1));
         add(price);
+
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        setSize(900, 650);
+        setVisible(true);
+        setLocation(100, 50);
     }
 
     public static void main(String[] args)

@@ -153,9 +153,9 @@ public class HomePage extends JFrame implements ActionListener
             case "View Booked Flight" -> new ViewBookedFlight().setVisible(true);
             case "Journey Details" -> new FlightJourney();
             case "Flight Zone" -> new FlightZone().setVisible(true);
-//            case "Cancel Ticket" -> new CancelFlight().setVisible(true);
-//            case "View Cancelled Ticket" -> new ViewCancelledTicket().setVisible(true);
-//            case "Check Payment" -> new CheckPaymentDetails().setVisible(true);
+            case "Cancel Ticket" -> new CancelFlight().setVisible(true);
+            case "View Cancelled Ticket" -> new ViewCancelledTicket().setVisible(true);
+            case "Check Payment" -> new CheckPaymentDetails().setVisible(true);
             case "Exit" -> System.exit(0);
         }
     }
