@@ -1,6 +1,7 @@
 package AMS;
 
 import javax.swing.*;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,17 +27,22 @@ public class HomePage extends JFrame implements ActionListener
         l1 = new JLabel(img2);
 
         JMenuBar m1 = new JMenuBar();
+        EtchedBorder mBorder = new EtchedBorder(EtchedBorder.RAISED, Color.GRAY, Color.BLACK);
 
         JMenu men1 = new JMenu("Passenger Profile");
         JMenuItem ment1 = new JMenuItem("Add Passenger Profile");
         JMenuItem ment2 = new JMenuItem("View Passenger Profile");
         men1.add(ment1);
         men1.add(ment2);
+        men1.setBorder(mBorder);
+        m1.add(Box.createHorizontalStrut(10));
         m1.add(men1);
 
         JMenu men2 = new JMenu("Manage Passenger");
         JMenuItem ment3 = new JMenuItem("Update Passenger Details");
         men2.add(ment3);
+        men2.setBorder(mBorder);
+        m1.add(Box.createHorizontalStrut(10));
         m1.add(men2);
 
         JMenu men3 = new JMenu("Your Flight");
@@ -44,6 +50,8 @@ public class HomePage extends JFrame implements ActionListener
         JMenuItem ment5 = new JMenuItem("View Booked Flight");
         men3.add(ment4);
         men3.add(ment5);
+        men3.setBorder(mBorder);
+        m1.add(Box.createHorizontalStrut(10));
         m1.add(men3);
 
         JMenu men4 = new JMenu("Flight Details");
@@ -51,23 +59,31 @@ public class HomePage extends JFrame implements ActionListener
         JMenuItem ment7 = new JMenuItem("Flight Zone");
         men4.add(ment6);
         men4.add(ment7);
+        men4.setBorder(mBorder);
+        m1.add(Box.createHorizontalStrut(10));
         m1.add(men4);
 
         JMenu men5 = new JMenu("Cancellation");
         JMenuItem ment8 = new JMenuItem("Cancel Ticket");
-        JMenuItem ment9 = new JMenuItem("View Canceled Ticket");
+        JMenuItem ment9 = new JMenuItem("View Cancelled Ticket");
         men5.add(ment8);
         men5.add(ment9);
+        men5.setBorder(mBorder);
+        m1.add(Box.createHorizontalStrut(10));
         m1.add(men5);
 
         JMenu men6 = new JMenu("Bill");
         JMenuItem ment10 = new JMenuItem("Check Payment");
         men6.add(ment10);
+        men6.setBorder(mBorder);
+        m1.add(Box.createHorizontalStrut(10));
         m1.add(men6);
 
         JMenu men7 = new JMenu("Logout");
         JMenuItem ment11 = new JMenuItem("Exit");
         men7.add(ment11);
+        men7.setBorder(mBorder);
+        m1.add(Box.createHorizontalStrut(10));
         m1.add(men7);
 
         m1.setBackground(new java.awt.Color(4, 1, 54));

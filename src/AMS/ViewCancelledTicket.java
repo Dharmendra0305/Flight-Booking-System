@@ -22,7 +22,7 @@ public class ViewCancelledTicket extends JFrame
         try
         {
             ConnectionClass obj = new ConnectionClass();
-            String q = "Select * from cancelFlight";
+            String q = "select * from cancelflight";
             ResultSet rest = obj.stm.executeQuery(q);
             while (rest.next())
             {

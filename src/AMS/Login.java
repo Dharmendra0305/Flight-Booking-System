@@ -91,7 +91,7 @@ public class Login extends JFrame implements ActionListener
                 ResultSet rs = obj.stm.executeQuery(q);
                 if (rs.next())
                 {
-//                    new HomePage().setVisible(true);
+                    new HomePage().setVisible(true);
                     f.setVisible(false);
                 }
                 else
@@ -109,7 +109,7 @@ public class Login extends JFrame implements ActionListener
         if (e.getSource() == btn2)
         {
             this.setVisible(false);
-//            new SignUpMessage();
+            new SignUpMessage();
         }
     }
 

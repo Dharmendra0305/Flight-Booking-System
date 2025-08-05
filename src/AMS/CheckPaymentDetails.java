@@ -4,8 +4,6 @@ import net.proteanit.sql.DbUtils;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 public class CheckPaymentDetails extends JFrame
@@ -92,24 +90,19 @@ public class CheckPaymentDetails extends JFrame
         add(label);
         setVisible(true);
 
-        show.addActionListener(new ActionListener()
-        {
-            @Override
-            public void actionPerformed(ActionEvent e)
+        show.addActionListener(_ -> {
+            try
             {
-                try
-                {
-                    String usn = textField.getText();
-                    ConnectionClass obj = new ConnectionClass();
-                    String str = "select tid, price, journey_date, journey_time, username, status from bookedFlight where username='"+usn+"' and status='Success'";
-                    ResultSet r = obj.stm.executeQuery(str);
-                    table.setModel(DbUtils.resultSetToTableModel(r));
-                    table.setFont(new Font("Arial", Font.BOLD, 14));
-                }
-                catch (Exception ex)
-                {
-                    ex.printStackTrace();
-                }
+                String usn = textField.getText();
+                ConnectionClass obj = new ConnectionClass();
+                String str = "select tid, price, journey_date, journey_time, username, status from bookedFlight where username='"+usn+"' and status='Success'";
+                ResultSet r = obj.stm.executeQuery(str);
+                table.setModel(DbUtils.resultSetToTableModel(r));
+                table.setFont(new Font("Arial", Font.BOLD, 14));
+            }
+            catch (Exception ex)
+            {
+                ex.printStackTrace();
             }
         });
         setSize(960, 590);
