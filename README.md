@@ -25,11 +25,11 @@ A desktop-based flight booking system built using Java Swing, featuring flight s
 🚀 How to Run
 - Clone the repository
 - Run Login.java
-  . Open Login.java in your IDE (e.g., IntelliJ, Eclipse) and run the file.
+  * Open Login.java in your IDE (e.g., IntelliJ, Eclipse) and run the file.
 - Log in with your credentials
-  . Use your registered username and password.
+  * Use your registered username and password.
 - New user?
-  . Click Signup to create a new account.
+  * Click Signup to create a new account.
 
 <h2>Login</h2>
 
