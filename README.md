@@ -26,10 +26,30 @@ A desktop-based flight booking system built using Java Swing, featuring flight s
 
 ![Login](https://github.com/Dharmendra0305/Flight-Booking-System/blob/570235693e490c14a1dc739028bd1f595c3fb1d8/Login.png)
 
+<h2>SignUp</h2>
 
+![signup](https://github.com/Dharmendra0305/Flight-Booking-System/blob/3867c90147a01d8c3b471e3ff965df0e43fcaacb/signup.png)
 
+<h2>Add Passenger Details</h2>
 
+![addP](https://github.com/Dharmendra0305/Flight-Booking-System/blob/3867c90147a01d8c3b471e3ff965df0e43fcaacb/addP.png)
 
+<h2>Update Passenger Details</h2>
 
-Would you like me to help you write a short project description for your GitHub repo header or LinkedIn post too?
+![updateP](https://github.com/Dharmendra0305/Flight-Booking-System/blob/3867c90147a01d8c3b471e3ff965df0e43fcaacb/update.png)
 
+<h2>Book Flight</h2>
+
+![book](https://github.com/Dharmendra0305/Flight-Booking-System/blob/3867c90147a01d8c3b471e3ff965df0e43fcaacb/BookF.png)
+
+<h2>Flight Zone</h2>
+
+![zone](https://github.com/Dharmendra0305/Flight-Booking-System/blob/3867c90147a01d8c3b471e3ff965df0e43fcaacb/Zone.png)
+
+<h2>Cancel Ticket</h2>
+
+![cancel](https://github.com/Dharmendra0305/Flight-Booking-System/blob/3867c90147a01d8c3b471e3ff965df0e43fcaacb/cancel.png)
+
+<h2>Check Payment</h2>
+
+![Login](https://github.com/Dharmendra0305/Flight-Booking-System/blob/3867c90147a01d8c3b471e3ff965df0e43fcaacb/bill.png)
