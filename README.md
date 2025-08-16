@@ -32,4 +32,12 @@ A full-featured **Java-based flight booking application** that simulates real-wo
 
 <h2>Home Page</h2>
 
-![Home page]()
+![Home page](https://github.com/Dharmendra0305/Flight-Booking-System/blob/c448160a3606e87f3ee0ba710d28115c7294c90b/Home-Page.png)
+
+<h2>Admin</h2>
+
+<h3>Admin Login</h3>
+![Login](https://github.com/Dharmendra0305/Flight-Booking-System/blob/c448160a3606e87f3ee0ba710d28115c7294c90b/Admin-Login.png)
+
+<h3>Admin Panel</h3>
+![Panel](https://github.com/Dharmendra0305/Flight-Booking-System/blob/c448160a3606e87f3ee0ba710d28115c7294c90b/Admin-Panel.png)
