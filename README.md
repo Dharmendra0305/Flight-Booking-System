@@ -32,16 +32,16 @@ A full-featured **Java-based flight booking application** that simulates real-wo
 Follow these steps to set up and run the Flight Booking System locally:
 
    📦 Clone the Repository
-    - git clone https://github.com/Dharmendra0305/Flight-Booking-System.git
+    - git clone https://github.com/Dharmendra0305/Flight-Booking-System.git <br>
     - cd Flight-Booking-System
     
-    🛠 Compile and Run
+   🛠 Compile and Run
     - Open the project in your preferred Java IDE
     - Navigate to the src folder in ui package
     - Run the HomeScreen class: 
     - Make sure your IDE is configured to use the correct JDK
     
-    📁 Notes
+   📁 Notes
     - All flight and booking data is stored in local JSON files or text files (depending on your implementation)
     - No external database or server setup is required
     - Payment processing is simulated for demonstration purposes
