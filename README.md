@@ -28,8 +28,8 @@ A full-featured **Java-based flight booking application** that simulates real-wo
 - Separation of concerns for maintainability  
 - Designed with scalability and user experience in mind
 
-🚀 How to Run This Project
-Follow these steps to set up and run the Flight Booking System locally:
+## 🚀 How to Run This Project 
+- Follow these steps to set up and run the Flight Booking System locally:
 
    📦 Clone the Repository
     - git clone https://github.com/Dharmendra0305/Flight-Booking-System.git <br>
